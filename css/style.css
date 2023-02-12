@@ -1,0 +1,136 @@
+:root{
+    --just-white: #ffffff;
+    --just-black: #212121;
+    --color-primary: #2C3639;
+    --color-secondary: #3F4E4F;
+    --brown: #A27B5C;
+    --gray: #DCD7C9;
+    --font-family: 'Krub', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-size: 2.8rem;
+}
+
+h3{
+    font-size: 1.8rem;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+}
+
+.button{
+    background-color: var(--color-secondary);
+    color: var(--gray);
+    padding: 1rem 3rem;
+    text-decoration: none;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: .5rem;
+}
+
+.button:hover {
+    background-color: var(--color-primary);
+    color: bisque;
+}
+
+/* ----------- Header ---------------*/
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .title-nav{
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 3.8rem;
+}
+
+header .title-nav span{
+    font-size: 2rem;
+}
+
+header .content-nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-primary);
+}
+
+header .content-nav nav{
+    width: 100rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+header .content-nav nav a{
+    padding: 1.3rem 3rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--gray);
+}
+
+header .content-nav nav a:hover{
+    background-color: var(--color-secondary);
+    color: bisque;
+}
+
+/*----------------- img ----------------*/
+.banner{
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    position: relative;
+    text-align: center;
+}
+ 
+.banner .content-banner{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .8);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .content-banner h2,
+.banner .content-banner p{
+    color: var(--just-white);
+}
+
+.banner .content-banner .ubication{
+    display: flex;
+    align-items: center;
+}
+
+@media(max-width: 768px){
+
+    .button{
+        width: 90%;
+    }
+
+    header .content-nav nav{
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
