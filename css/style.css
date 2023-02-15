@@ -1,9 +1,8 @@
 :root{
     --just-white: #ffffff;
     --just-black: #212121;
-    --color-primary: #2C3639;
-    --color-secondary: #3F4E4F;
-    --brown: #A27B5C;
+    --color-primary: #012340;
+    --color-secondary: #03A63C;
     --gray: #DCD7C9;
     --font-family: 'Krub', sans-serif;
 }
@@ -24,7 +23,6 @@ h3{
 
 html{
     font-size: 62.5%;
-    scroll-snap-type: y mandatory;
 }
 
 body{
@@ -33,12 +31,11 @@ body{
     background-image: linear-gradient(to top, #dfe9f3 0%, var(--just-white) 100%);
 }
 
-.button{
-    background-color: var(--color-secondary);
-    color: var(--gray);
+.button,
+.button-form{
+    color: var(--just-white);
     padding: 1rem 3rem;
     text-decoration: none;
-    margin-top: 3rem;
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: 700;
@@ -46,11 +43,26 @@ body{
     border: none;
 }
 
-.button:hover {
+.button{
+    margin-top: 3rem;
     background-color: var(--color-primary);
-    color: bisque;
+}
+
+.button-form{
+    margin-top: 4rem;
+    background-color: #172026;
+}
+
+.button:hover {
+    background-color: #027333;
     cursor: pointer;
 }
+
+.button-form:hover{
+    background-color: var(--color-secondary);
+    cursor: pointer;
+}
+
 
 /* ----------- Header ---------------*/
 header{
@@ -87,18 +99,18 @@ header .content-nav nav a{
     font-size: 1.8rem;
     font-weight: 700;
     text-decoration: none;
-    color: var(--gray);
+    color: var(--just-white);
 }
 
 header .content-nav nav a:hover{
     background-color: var(--color-secondary);
-    color: bisque;
+    color: var(--just-white);
 }
 
 
 /*----------------- img ----------------*/
 .banner{
-    background-image: url(../images/banner.jpg);
+    background-image: url(../images/banner4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 45rem;
@@ -168,15 +180,15 @@ main .shadow{
 }
 
 .service h3{
-    color: var(--color-secondary);
+    color: var(--color-primary);
     margin: 2rem 0;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .service .icons{
     height: 15rem;
     width: 15rem;
-    background-color: var(--brown);
+    background-color: var(--color-secondary);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -186,11 +198,12 @@ main .shadow{
 .service p{
     padding: 1.5rem 1rem;
     line-height: 2rem;
+    font-weight: 500;
 }
 
 /*-------Form -------*/
 .form{
-    background-color: var(--color-secondary);
+    background-color: #223240;
     width: min(60rem, 100%);
     margin: 0 auto;
     padding: 2rem;
@@ -230,7 +243,6 @@ main .shadow{
 .field label{
     color: var(--just-white);
     font-weight: 700;
-    margin-bottom: 1rem;
 }
 
 .field textarea{
@@ -242,9 +254,11 @@ main .shadow{
 .field .input{
     width: 100%;
     border: none;
+    margin-top: 1rem;
     padding: 1.5rem;
     border-radius: 0.5rem;
 }
+
 
 .send {
     display: flex;
@@ -258,6 +272,7 @@ main .shadow{
 }
 
 @media(max-width: 450px){
+    
     .container{
         width: 100%;
     }
@@ -270,7 +285,7 @@ main .shadow{
 
 @media(max-width: 768px){
 
-    .button{
+    .button, .button-form{
         width: 90%;
         margin-top: 1.5rem;
     }
